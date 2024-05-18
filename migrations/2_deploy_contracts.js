@@ -17,4 +17,6 @@ module.exports = async function (deployer, netword, accounts) {
     await rwd.transfer(decentralBank.address, '1000000000000000000000000');
     //100
     await tether.transfer(accounts[1],        '1000000000000000000');
+
 };
+ 
