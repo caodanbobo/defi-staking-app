@@ -11,12 +11,11 @@ module.exports = async function (deployer, netword, accounts) {
     const rwd=await RWD.deployed();
 
     await deployer.deploy(DecentralBank, rwd.address, tether.address);
-    const decentralBank=await DecentralBank.deployed();
 
     //1m
     await rwd.transfer(decentralBank.address, '1000000000000000000000000');
-    //100
-    await tether.transfer(accounts[1],        '1000000000000000000');
+    //10
+    await tether.transfer(accounts[1],        '10000000000000000000');
 
 };
  
